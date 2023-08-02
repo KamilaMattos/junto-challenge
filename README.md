@@ -4,11 +4,11 @@
 
 - Node.js
 - Express
-- JWT
-- Bycript
 - Typescript
 - TypeORM
 - Postgres
+- JWT
+- Bycript
 - Docker
 - Insomnia
 - Beekeeper Studio
