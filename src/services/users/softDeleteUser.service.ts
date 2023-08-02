@@ -7,14 +7,14 @@ export const deleteUserService = async (id: string): Promise<void> => {
   const user = await userRepository.findOneBy({ id })
 
   if (!user) {
-    throw new AppError("User not found!", 404)
+    throw new AppError("Usuário não encontrado!", 404)
   }
 
-  if (user.ativo == false) {
-    throw new AppError("User inactiveted")
+  if (user.isActive == false) {
+    throw new AppError("Usuário desativado!")
   }
 
-  user.ativo = false
+  user.isActive = false
 
   await userRepository.update({ id }, user)
 }

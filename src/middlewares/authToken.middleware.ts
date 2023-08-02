@@ -10,7 +10,7 @@ export const authToken = async (
   let token = req.headers.authorization
 
   if (!token) {
-    throw new AppError("Invalid token!", 401)
+    throw new AppError("Token inválido!", 401)
   }
 
   token = token?.split(" ")[1]
@@ -20,7 +20,7 @@ export const authToken = async (
     process.env.SECRET_KEY as string,
     (error: any, decoded: any) => {
       if (error) {
-        throw new AppError("Invalid token", 401)
+        throw new AppError("Token inválido!", 401)
       }
 
       req.user = {

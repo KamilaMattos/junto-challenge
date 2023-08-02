@@ -6,10 +6,7 @@ import {
   UpdateDateColumn,
   OneToMany,
   ManyToOne,
-  OneToOne,
-  JoinColumn,
 } from "typeorm"
-import { Address } from "./address.entity"
 import { User } from "./user.entity"
 
 @Entity("claims")
@@ -26,9 +23,26 @@ class Claim {
   })
   type: string
 
-  @OneToOne(() => Address, { eager: true })
-  @JoinColumn()
-  address: Address
+  @Column()
+  street: string
+
+  @Column({ type: "int" })
+  number: number
+
+  @Column()
+  neighborhood: string
+
+  @Column()
+  city: string
+
+  @Column()
+  state: string
+
+  @Column()
+  country: string
+
+  @Column({ default: true })
+  isActive: boolean
 
   @CreateDateColumn()
   createdAt: Date
