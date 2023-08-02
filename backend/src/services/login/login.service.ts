@@ -13,7 +13,7 @@ export const loginService = async ({
 
   const user = await userRepository.findOneBy({ email })
 
-  if (user?.ativo == false) {
+  if (user?.isActive == false) {
     throw new AppError("User is not active")
   }
 
@@ -21,7 +21,7 @@ export const loginService = async ({
     throw new AppError("Invalid email or password", 401)
   }
 
-  if (!user.ativo) {
+  if (!user.isActive) {
     throw new AppError("Invalid user", 401)
   }
 
@@ -33,7 +33,7 @@ export const loginService = async ({
 
   const token = jwt.sign(
     {
-      ativo: user.ativo,
+      isActie: user.isActive,
     },
     process.env.SECRET_KEY as string,
     {

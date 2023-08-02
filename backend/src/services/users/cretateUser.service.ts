@@ -14,7 +14,7 @@ export const createUserService = async (
   })
 
   if (userAlreadyExists) {
-    throw new AppError("User already exists", 400)
+    throw new AppError("Usuário já cadastrado!", 400)
   }
 
   const createUser = userRepository.create(newUser)

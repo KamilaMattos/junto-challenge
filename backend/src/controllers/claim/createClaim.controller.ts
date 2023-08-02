@@ -7,5 +7,5 @@ export const createClaimController = async (req: Request, res: Response) => {
 
   await createClaimService(claim)
 
-  return res.status(201).json({ message: "Sinistro criado com sucesso!" })
+  return res.status(201).json(claim)
 }

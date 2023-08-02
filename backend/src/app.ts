@@ -14,8 +14,6 @@ app.use(express.json())
 app.use("/users", usersRoute)
 app.use("/login", sessionRoutes)
 app.use("/claim", claimRoute)
-// app.use("/properties", propertiesRoute)
-// app.use("/schedules", schedulesRoute)
 
 app.use(handleErrorMiddleware)
 

@@ -1,7 +1,7 @@
 import { Router } from "express"
-import { loginController } from "../../controllers/login/login.controller"
 import { schemaValidationMiddleware } from "../../middlewares/schemaValidation.middleware"
 import { loginUserSchema } from "../../schemas/login.schema"
+import { loginController } from "../../controllers/login/login.controller"
 
 export const sessionRoutes = Router()
 
