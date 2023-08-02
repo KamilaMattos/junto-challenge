@@ -1,6 +1,6 @@
 # PRE HACKATON JUNTO NOVOS TALENTOS - 2023
 
-# FERRAMENTAS UTILIZADAS:
+# Ferramentas utilizadas:
 
 - Node.js
 - Express
@@ -9,10 +9,11 @@
 - Typescript
 - TypeORM
 - Postgres
+- Docker
 - Insomnia
 - Beekeeper Studio
 
-# PASSO A PASSO PARA RODAR O PROJETO:
+# Passo a passo para rodar o projeto:
 
 Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
 
